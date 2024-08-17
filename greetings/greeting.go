@@ -2,7 +2,7 @@ package greetings
 
 import (
 	"errors"
-	"fmt"
+	//"fmt"
 	"math/rand"
 )
 
@@ -10,8 +10,8 @@ func Hello(name string) (string, error){
 	if (name == ""){
 		return "", errors.New("nome não pode ser vazio")
 	}
-	message := fmt.Sprintf(randomFormat(), name)
-	return message, nil
+	//message := fmt.Sprintf(randomFormat(), name)
+	return "Abobora", nil
 }
 
 func Hellos(names []string) (map[string]string, error){
@@ -40,3 +40,4 @@ func randomFormat() string{
 
 	return formats[rand.Intn(len(formats))]
 }
+
