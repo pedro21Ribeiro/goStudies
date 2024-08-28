@@ -4,7 +4,7 @@ import (
 	//"flag"
 	"fmt"
 	"os"
-
+	"strings"
 )
 
 func main() {
@@ -15,6 +15,16 @@ func main() {
 		}
 		out = fmt.Sprintf("%v %v", out, os.Args[i])
 	}
-	
-	fmt.Println(out)
+    fmt.Print(" _" + strings.Repeat("_", len([]rune(out))) + "_\n") 
+    fmt.Print("/ " + strings.Repeat(" ", len([]rune(out))) + " \\\n")
+	fmt.Print("| " + out + "  |\n")
+    fmt.Print("\\_" + strings.Repeat("_", len([]rune(out))) + "_/\n")
+
+    fmt.Println("   |")
+    fmt.Println("   |")
+    fmt.Println("   /")
+
+    fmt.Println(" @")
+    fmt.Println("/|\\")
+    fmt.Println("/ \\")
 }
